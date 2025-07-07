@@ -27,9 +27,11 @@ base_requires = [
     'pandas>=2.2.3',
     'scipy',
     'scikit-learn',
-    'xarray>=2024.11.0,<2025.6.0',
+    #'xarray>=2024.11.0,<2025.6.0',
+    'xarray>=2025.7.0',
     'xarray-beam',
-    'zarr',
+    #'zarr>=3',
+    'zarr<3',
 ]
 
 docs_requires = [

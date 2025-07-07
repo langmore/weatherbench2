@@ -54,6 +54,7 @@ OUTPUT_PATH = flags.DEFINE_string('output_path', None, help='zarr outputs')
 OUTPUT_CHUNKS = flag_utils.DEFINE_chunks(
     'output_chunks', '', help='desired chunking of output zarr'
 )
+flags.declare_key_flag("output_chunks")
 LATITUDE_NODES = flags.DEFINE_integer(
     'latitude_nodes', None, help='number of desired latitude nodes'
 )

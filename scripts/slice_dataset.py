@@ -69,6 +69,7 @@ SEL = flag_utils.DEFINE_dim_value_pairs(
         'but falls back to string. '
     ),
 )
+flags.declare_key_flag("sel")  # To make it appear with --help or --helpshort
 
 SEL_STRINGS = flag_utils.DEFINE_dim_value_pairs(
     'sel_strings',
@@ -83,6 +84,7 @@ SEL_STRINGS = flag_utils.DEFINE_dim_value_pairs(
         'Useful, since years should be sliced using strings like "2000". '
     ),
 )
+flags.declare_key_flag("sel_strings")
 
 ISEL = flag_utils.DEFINE_dim_value_pairs(
     'isel',
@@ -95,6 +97,7 @@ ISEL = flag_utils.DEFINE_dim_value_pairs(
         'a list of "+" delimited ints.'
     ),
 )
+flags.declare_key_flag("isel")
 
 DROP_SEL = flag_utils.DEFINE_dim_value_pairs(
     'drop_sel',
@@ -109,6 +112,7 @@ DROP_SEL = flag_utils.DEFINE_dim_value_pairs(
         'but falls back to string. '
     ),
 )
+flags.declare_key_flag("drop_sel")
 
 DROP_SEL_STRINGS = flag_utils.DEFINE_dim_value_pairs(
     'drop_sel_strings',
@@ -123,6 +127,7 @@ DROP_SEL_STRINGS = flag_utils.DEFINE_dim_value_pairs(
         'Useful, since years should be sliced using strings like "2000". '
     ),
 )
+flags.declare_key_flag("drop_sel_strings")
 
 DROP_ISEL = flag_utils.DEFINE_dim_value_pairs(
     'drop_isel',
@@ -135,6 +140,7 @@ DROP_ISEL = flag_utils.DEFINE_dim_value_pairs(
         'a list of "+" delimited ints.'
     ),
 )
+flags.declare_key_flag("drop_isel")
 
 DROP_VARIABLES = flags.DEFINE_list(
     'drop_variables',
@@ -157,6 +163,7 @@ KEEP_VARIABLES = flags.DEFINE_list(
 OUTPUT_CHUNKS = flag_utils.DEFINE_chunks(
     'output_chunks', '', help='Chunk sizes overriding input chunks.'
 )
+flags.declare_key_flag("output_chunks")
 
 RUNNER = flags.DEFINE_string(
     'runner', None, help='Beam runner. Use DirectRunner for local execution.'
